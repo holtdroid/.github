@@ -173,6 +173,48 @@ def avatar():
 </svg>"""
 
 
+PANDORA = """<g fill="none">
+<circle cx="32" cy="24" r="20" fill="#f5b446" opacity=".18"/>
+<circle cx="32" cy="26" r="11" fill="#f5b446" opacity=".22"/>
+<path d="M12 34h40v18a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4z" fill="#8a5a3c"/>
+<path d="M12 40h40v4H12z" fill="#6d4630"/>
+<rect x="28.5" y="41" width="7" height="8" rx="1.5" fill="#d9b48f"/>
+<path d="M10 31.5 45.5 17l2.4 5.6L12.4 37z" fill="#a06b48"/>
+<path d="M10 31.5 45.5 17" stroke="#c4875c" stroke-width="1.4" stroke-linecap="round"/>
+<circle cx="24" cy="14" r="1.8" fill="#f5b446"/>
+<circle cx="34" cy="7" r="1.4" fill="#ffe08a"/>
+<circle cx="40" cy="27" r="1.6" fill="#3ddc84"/>
+<circle cx="29" cy="21" r="1.2" fill="#ffe08a"/>
+<circle cx="19" cy="24" r="1" fill="#3ddc84"/>
+<path d="M44 9l1 2.4 2.4 1-2.4 1-1 2.4-1-2.4-2.4-1 2.4-1z" fill="#ffe08a"/>
+</g>"""
+
+
+def disclaimer():
+    w, h = 1280, 260
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}">
+<defs>
+  <linearGradient id="dbg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#14100a"/><stop offset="1" stop-color="#0c0d0b"/>
+  </linearGradient>
+  <radialGradient id="dglow" cx="150" cy="130" r="260" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#f5b446" stop-opacity=".28"/><stop offset="1" stop-color="#f5b446" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="ddots" width="28" height="28" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1.3" fill="#fff" fill-opacity=".05"/>
+  </pattern>
+</defs>
+<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="28" fill="url(#dbg)" stroke="#f5b446" stroke-opacity=".45" stroke-width="2"/>
+<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="28" fill="url(#ddots)"/>
+<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="28" fill="url(#dglow)"/>
+<g transform="translate(62 34) scale(3)">{PANDORA}</g>
+<text x="330" y="74" font-family="{MONO}" font-size="22" letter-spacing="3" fill="#f5b446">⚠ DISCLAIMER · PANDORA'S BOX</text>
+<text x="330" y="128" font-family="{FONT}" font-size="44" font-weight="700" fill="#f4f1ea">Fully AI-generated. Use at your own risk.</text>
+<text x="330" y="172" font-family="{FONT}" font-size="25" fill="#c9c2b4">Not a single line of code was written or reviewed by a human.</text>
+<text x="330" y="208" font-family="{FONT}" font-size="25" fill="#c9c2b4">Written by Claude through Claude Code. Open with care.</text>
+</svg>"""
+
+
 def write(name, svg, width):
     path = OUT / f"{name}.svg"
     path.write_text(svg)
@@ -182,6 +224,7 @@ def write(name, svg, width):
 OUT.mkdir(parents=True, exist_ok=True)
 write("banner", profile_banner(), 1280)
 write("avatar", avatar(), 512)
+write("ai-disclaimer", disclaimer(), 1280)
 for r in REPOS:
     write(f"social-{r['repo']}", social(r), 1280)
     write(f"icon-{r['repo']}", f'<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 64 64">{icon(r["repo"])}</svg>', 128)

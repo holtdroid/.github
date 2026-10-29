@@ -9,14 +9,6 @@
   <a href="https://holtdroid.github.io/holtdroid/concepts/architecture/">Architecture</a>
 </p>
 
-<p align="center">
-  <img src="https://github.com/holtdroid/.github/raw/main/profile/assets/ai-disclaimer.png" alt="Disclaimer: fully AI-generated. Not a single line of code was written or reviewed by a human. Use at your own risk.">
-</p>
-
-> [!CAUTION]
-> **Fully AI-generated.** Not a single line of this project was written or reviewed by a human: all of it was
-> written by Claude through Claude Code. It's a Pandora's box, so use it at your own risk.
-
 Holtdroid is a self-hosted, browser-based Android sandbox for testing APKs. Pick a build that
 your CI or a sync job dropped into a folder or S3 bucket, launch an Android device on demand,
 and get the device screen, Chrome DevTools for the app's WebViews, clipboard sync and a VPN
@@ -77,3 +69,13 @@ Apache-2.0.
 </table>
 
 <sub>Status: pre-alpha. Everything here changes freely until the first tagged release.</sub>
+
+---
+
+<p align="center">
+  <img src="https://github.com/holtdroid/.github/raw/main/profile/assets/ai-disclaimer.png" alt="Disclaimer: fully AI-generated. Not a single line of code was written or reviewed by a human. Use at your own risk.">
+</p>
+
+> [!CAUTION]
+> **Fully AI-generated.** Not a single line of this project was written or reviewed by a human: all of it was
+> written by Claude through Claude Code. It's a Pandora's box, so use it at your own risk.

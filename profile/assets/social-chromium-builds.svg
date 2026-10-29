@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0c110f"/><stop offset="1" stop-color="#121c17"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="256.0" cy="352.0" r="480.0" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#1a73e8" stop-opacity=".22"/><stop offset="1" stop-color="#1a73e8" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1.4" fill="#fff" fill-opacity=".05"/>
+  </pattern>
+</defs>
+<rect width="1280" height="640" fill="url(#bg)"/>
+<rect width="1280" height="640" fill="url(#dots)"/>
+<rect width="1280" height="640" fill="url(#glow)"/>
+<rect y="630" width="1280" height="10" fill="#3ddc84"/>
+<g transform="translate(96 160) scale(5.4)"><g fill="none"><clipPath id="half-chromium-builds"><path d="M32 16a24 24 0 0 1 24 24v8H32z"/></clipPath><path d="M32 16c-13.3 0-24 10.7-24 24v8h24z" fill="#8a5a3c"/><circle cx="23" cy="32" r="3.5" fill="#1b1b1b"/><g clip-path="url(#half-chromium-builds)"><path d="M32 16a24 24 0 0 1 24 24v8H32z" fill="#1a73e8"/><path d="M32 26a12 12 0 0 1 0 24" stroke="#fff" stroke-opacity=".85" stroke-width="3" fill="none"/><path d="M32 33a5 5 0 0 1 0 10z" fill="#fff"/><path d="M44 20l6 6" stroke="#fbbc04" stroke-width="3" stroke-linecap="round"/></g><path d="M20 16l-4-7M44 16l4-7" stroke="#3ddc84" stroke-width="4" stroke-linecap="round"/><ellipse cx="32" cy="39" rx="5" ry="3.5" fill="#d9b48f"/><circle cx="32" cy="38" r="1.8" fill="#1b1b1b"/><rect x="4" y="48" width="56" height="8" rx="4" fill="#3ddc84"/></g></g>
+<text x="520" y="188" font-family="Menlo, SF Mono, monospace" font-size="30" fill="#3ddc84">holtdroid/<tspan fill="#8fa197">chromium-builds</tspan></text>
+<text x="520" y="268" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="80" font-weight="700" fill="#f4f7f5">Chromium builds</text>
+<text x="520" y="318" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="34" fill="#b9c4be">Chromium and WebView for Android</text><text x="520" y="364" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="34" fill="#b9c4be">from release tags, with proprietary</text><text x="520" y="410" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="34" fill="#b9c4be">codecs, for x86_64 and arm64.</text>
+<rect x="520" y="488" width="142.0" height="44" rx="22" fill="#1a73e8" fill-opacity=".14" stroke="#1a73e8" stroke-opacity=".5"/><text x="591.0" y="517" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22" font-weight="500" fill="#dfe7e2">Chromium</text><rect x="674.0" y="488" width="127.5" height="44" rx="22" fill="#1a73e8" fill-opacity=".14" stroke="#1a73e8" stroke-opacity=".5"/><text x="737.75" y="517" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22" font-weight="500" fill="#dfe7e2">WebView</text><rect x="813.5" y="488" width="69.5" height="44" rx="22" fill="#1a73e8" fill-opacity=".14" stroke="#1a73e8" stroke-opacity=".5"/><text x="848.25" y="517" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22" font-weight="500" fill="#dfe7e2">APK</text>
+<text x="1220" y="590" text-anchor="end" font-family="Menlo, SF Mono, monospace" font-size="22" fill="#6f817a">holtdroid.github.io/holtdroid</text>
+</svg>

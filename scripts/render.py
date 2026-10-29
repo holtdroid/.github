@@ -104,12 +104,12 @@ FONT = "Helvetica Neue, Helvetica, Arial, sans-serif"
 MONO = "Menlo, SF Mono, monospace"
 
 
-def background(w, h, accent):
+def background(w, h, accent, cx=0.2, cy=0.55):
     return f"""<defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
     <stop offset="0" stop-color="#0c110f"/><stop offset="1" stop-color="#121c17"/>
   </linearGradient>
-  <radialGradient id="glow" cx="{w * 0.2}" cy="{h * 0.55}" r="{h * 0.75}" gradientUnits="userSpaceOnUse">
+  <radialGradient id="glow" cx="{w * cx}" cy="{h * cy}" r="{h * 0.75}" gradientUnits="userSpaceOnUse">
     <stop offset="0" stop-color="{accent}" stop-opacity=".22"/><stop offset="1" stop-color="{accent}" stop-opacity="0"/>
   </radialGradient>
   <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
@@ -165,6 +165,14 @@ def profile_banner():
 </svg>"""
 
 
+def avatar():
+    w = 512
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{w}" viewBox="0 0 {w} {w}">
+{background(w, w, "#3ddc84", 0.5, 0.5).replace(f'<rect y="{w - 10}" width="{w}" height="10" fill="#3ddc84"/>', "")}
+<g transform="translate(64 61) scale(6)">{icon("holtdroid")}</g>
+</svg>"""
+
+
 def write(name, svg, width):
     path = OUT / f"{name}.svg"
     path.write_text(svg)
@@ -173,6 +181,7 @@ def write(name, svg, width):
 
 OUT.mkdir(parents=True, exist_ok=True)
 write("banner", profile_banner(), 1280)
+write("avatar", avatar(), 512)
 for r in REPOS:
     write(f"social-{r['repo']}", social(r), 1280)
     write(f"icon-{r['repo']}", f'<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 64 64">{icon(r["repo"])}</svg>', 128)

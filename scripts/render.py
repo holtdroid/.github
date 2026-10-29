@@ -146,7 +146,7 @@ def social(r):
 <text x="520" y="268" font-family="{FONT}" font-size="80" font-weight="700" fill="#f4f7f5">{r["title"]}</text>
 {lines}
 {chips(520, 488, r["chips"], r["accent"])}
-<text x="1220" y="590" text-anchor="end" font-family="{MONO}" font-size="22" fill="#6f817a">holtdroid.github.io/holtdroid</text>
+<text x="1220" y="590" text-anchor="end" font-family="{MONO}" font-size="22" fill="#6f817a">holtdroid.github.io</text>
 </svg>"""
 
 
